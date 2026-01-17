@@ -1,0 +1,17 @@
+[package]
+name = "true-iso"
+version = "0.1.0"
+edition = "2021"
+description = "CLI tool to correct isometric tile sprites to mathematically consistent 2:1 proportions"
+license = "MIT"
+
+[dependencies]
+image = "0.25"
+imageproc = "0.25"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+nalgebra = "0.33"
+
+[profile.release]
+lto = true
+opt-level = 3
